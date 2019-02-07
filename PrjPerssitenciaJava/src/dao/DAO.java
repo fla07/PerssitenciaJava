@@ -1,7 +1,11 @@
 package dao;
 
-public abstract class DAO {
-  public abstract void Incluir(T elemento) throws Exception;
-  public T buscar(int id) throws Exception;
-  public Set<T> listar(int... param) throws Exception;
+import java.util.Set;
+
+public abstract class DAO<T> {
+	
+	public void Incluir(T elemento) {}	
+	public abstract T buscar(int id) throws Exception;
+	public  abstract T  listar(int...param ) throws Exception;
 }
+
